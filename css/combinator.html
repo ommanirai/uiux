@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Combinator</title>
+    <style>
+        /* 
+            combinator
+            types:
+            1. grouping combinator(,)
+            2. descendent combinator(space)
+            3. child combinator(>)
+            4. general sibling combinator(~)
+            5. adjacent sibling combinator(+)
+            
+            */
+        /* 1. grouping combinator */
+        /* .parent,
+        .child,
+        span {
+            color: red;
+        } */
+
+        /* .child{
+                color: red;
+            } */
+
+        /* 2. descendent combinator */
+        .parent div {
+            color: green;
+        }
+
+        /* 3. child combinator */
+        .parent>div>div>div {
+            color: yellow;
+        }
+
+        /* 4. general sibling combinator */
+        .child1~div {
+            color: tomato;
+        }
+
+        .child+div {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">parent
+        <div class="child1">child 1
+            <div class="grandchild1">grandchild1
+                <div class="grand-grand-child">grand-grand-child</div>
+            </div>
+            <div class="grandchild2">grandchild2</div>
+            <div class="grandchild3">grandchild3</div>
+        </div>
+        <div class="child2">child 2</div>
+        <div class="child3">child 3</div>
+        <div class="child4">child 4</div>
+    </div>
+    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt deleniti accusamus sit quas? Voluptatum,
+        quis assumenda facere minus ipsam cumque reiciendis harum recusandae esse adipisci cum illo tenetur beatae
+        dolores?</span>
+    <ul>
+        <li>list1</li>
+        <li>list2
+            <ul>
+                <li>sub list 1</li>
+                <li>sub list 2</li>
+                <li>sub list 3</li>
+                <li>sub list 4</li>
+            </ul>
+        </li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+
+</body>
+
+</html>
