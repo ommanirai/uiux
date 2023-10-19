@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>Position</title>
+    <style>
+        /* 
+        types of position:
+        1. static 
+        2. relative
+        3. absolute
+            a. absolute to root/browser
+            b. absolute to parent
+        4. fixed
+        5. sticky
+        */
+        * {
+            margin: 0;
+        }
+
+        .parent{
+            position: relative;
+            height: 700px;
+            width: 700px;
+            background-color: yellowgreen;
+        }
+
+        .container {
+            height: 50px;
+            width: 100%;
+            background-color: aqua;
+            /* position: relative; */
+            /* top, bottom, left,right; */
+            /* top: 100px; */
+            /* right: 100px; */
+            /* bottom: 200px; */
+
+            position: fixed;
+            /* right: 0;
+            bottom: 0; */
+            /* top: 65%; */
+        }
+    .fixed{
+        width: 50%;
+        height: 1300px;
+        background-color: blue;
+    }
+    ul{
+
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+    li{
+        padding-top: 15px;
+    }
+    .sticky{
+        width: 100%;
+        height: 100px;
+        background-color: tomato;
+        position: sticky;
+        top: 50px;
+        bottom: 0;
+    }
+    .fix{
+        width: 50%;
+        height: 1300px;
+        background-color: yellow;
+    }
+    .div1{
+        width: 300px;
+        height:300px;
+        background-color: yellow;
+        position: relative;
+        top: 0;
+        z-index: 1;
+    }
+    .div2{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        position: relative;
+        top: -100px;
+        z-index: 0;
+        
+    }
+    .div3{
+        width: 300px;
+        height: 300px;
+        background-color: green;
+        position: relative;
+        top: -200px;
+        z-index: 3;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="parent">
+        <div class="container">
+
+            <ul>
+                <li>Hme</li>
+                <li>contact</li>
+                <li>about</li>
+                <li>blog</li>
+            </ul>
+        </div>
+    </div>
+    <div class="fixed">
+    </div>
+    <div class="sticky">
+        footer
+    </div>
+    <div class="fix">
+    </div>
+    <div class="fixed"></div> -->
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+
+</html>
