@@ -4,48 +4,67 @@
             Flex Layout
         </title>
         <style>
+            /* 
+            vw => viewport width(100vw)
+            vh => viewport height(100vh)
+            */
             *{
                 margin: 0;
+                box-sizing: border-box;
             }
             .header{
-                width: 100%;
-                height: 50px;
+                /* width: 100%;
+                height: 50px; */
+                width: 100vw;
+                height: 10vh;
                 background-color: aqua;
-                padding-top: 20px;
+                /* padding-top: 20px; */
             }
             .main{
                 display: flex;
-                width: 100%;
+                /* width: 100%; */
+                width: 100vw;
             }
             .left{
-                width: 25%;
-                height: 800px;
+                /* width: 25%;
+                height: 800px; */
+                width: 25vw;
+                height: 80vh;
                 background-color: blue;
             }
             .right{
-                width: 75%;
+                /* width: 75%; */
+                /* width: 75vw; */
             }
             .right-top{
-                width: 100%;
-                height: 400px;
+                /* width: 100%;
+                height: 400px; */
+                width: 75vw;
+                height:40vh;
                 background-color: blueviolet;
             }
             .right-bottom{
                 display: flex;
-                width: 100%;
+                /* width: 100%; */
+                /* width: 75vw; */
             }
             .right-bottom-left, .right-bottom-right{
-                width: 50%;
+                /* width: 50%; */
+                width: 37vw;
                 background-color: yellowgreen;
-                height: 400px;
+                /* height: 400px; */
+                height:40vh;
             }
             .right-bottom-right{
                 background-color: tomato;
+                width: 38vw;
             }
             .footer{
-                width: 100%;
+                /* width: 100%; */
+                width: 100vw;
                 background-color: aqua;
-                height: 50px;
+                /* height: 50px; */
+                height: 10vh;
                 padding-top: 20px;
             }
         </style>
@@ -53,11 +72,11 @@
     <body>
         <div class="header">
             <!-- <ul> -->
-                <li>Home</li>
+                <!-- <li>Home</li>
                 <li>About</li>
                 <li>Product</li>
                 <li>Blog</li>
-                <li>Contact</li>
+                <li>Contact</li> -->
             <!-- </ul> -->
         </div>
         <div class="main">
