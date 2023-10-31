@@ -67,17 +67,56 @@
                 height: 10vh;
                 padding-top: 20px;
             }
+            .header>ul{
+                display: flex;
+                list-style: none;
+                justify-content: space-evenly;
+                font-size: 30px;
+                padding-top: 20px;
+            }
+            li:hover{
+                cursor: pointer;
+            }
+            .category{
+                display: none;
+                position: absolute;
+                list-style: none;
+                background-color: ghostwhite;
+            }
+            .item li:hover .category{
+                display: block;
+            }
+            .item li{ 
+                position: relative;
+            }
+            .category{
+                padding: 0;
+            }
+            .category li{
+                padding: 10px;
+            }
+            .category li:hover{
+                background-color: yellow;
+            }
         </style>
     </head>
     <body>
         <div class="header">
-            <!-- <ul> -->
-                <!-- <li>Home</li>
+            <ul class="item">
+                <li>Home</li>
+                <li>Product
+                    <ul class="category">
+                        <li>Laptops</li>
+                        <li>Mobile</li>
+                        <li>Camera</li>
+                        <li>Beauty</li>
+                        <li>Health & Fitness</li>
+                    </ul>
+                </li>
                 <li>About</li>
-                <li>Product</li>
                 <li>Blog</li>
-                <li>Contact</li> -->
-            <!-- </ul> -->
+                <li>Contact</li>
+            </ul>
         </div>
         <div class="main">
             <div class="left">left</div>

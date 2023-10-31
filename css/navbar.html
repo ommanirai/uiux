@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .navbar{
+            width: 100vw;
+            height: 10vh;
+            background-color: darkblue;
+            color: white;
+        }
+        .item{
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+        }
+        .item li{
+            padding-top: 25px;
+            font-size: 25px;
+            position: relative;
+        }
+        .category{
+            display: none;
+            position: absolute;
+            color: black;
+            list-style: none;
+            padding: 0;
+            background-color: turquoise;
+        }
+        .category li:hover{
+            background-color: green;
+        }
+        .item li:hover .category{
+            display: block;
+        }
+        .category li{
+            position: relative;
+        }
+        .sub-category{
+            display: none;
+            position: absolute;
+            top: 0;
+            /* right: 0; */
+            left: 100%;
+            background-color: violet;
+            list-style:none;
+            padding: 0;
+        }
+        .category li:hover .sub-category{
+            display: block;
+        }
+        .sub-category li{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="item">
+            <li>Home</li>
+            <li>Product
+                <ul class="category">
+                    <li>Smartphone
+                        <ul class="sub-category">
+                            <li>apple</li>
+                            <li>samsung</li>
+                            <li>redmi</li>
+                        </ul>
+                    </li>
+                    <li>Laptops</li>
+                    <li>Camera</li>
+                </ul>
+            </li>
+            <li>Gallery</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </div>
+</body>
+</html>
