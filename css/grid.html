@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main {
+            display: grid;
+            grid-template-rows: 10vh 40vh 40vh 10vh;
+            grid-template-columns: 25vw 55vw 20vw;
+        }
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: aqua;
+        }
+        .left{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: yellowgreen;
+        }
+        .right-top{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: tomato;
+        }
+        .right-bottom-left{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: blue;
+        }
+        .right-bottom-right{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: rgb(128, 200, 20);
+        }
+        .footer{
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: rgb(25, 28, 22);
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+                <li>Map</li>
+            </ul>    
+        </div>
+        <div class="footer">footer</div>
+        <div class="left">left</div>
+        <div class="right-top">right top</div>
+        <div class="right-bottom-left">right-bottom-left</div>
+        <div class="right-bottom-right">right-bottom-right</div>
+    </div>
+</body>
+
+</html>
