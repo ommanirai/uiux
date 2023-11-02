@@ -98,9 +98,61 @@
             .category li:hover{
                 background-color: yellow;
             }
+            .small-screen{
+                display: none;
+            }
+            @media screen and (max-width: 600px) {
+                .header{
+                    display: none;
+                }
+                .small-screen{
+                    display: block;
+                    width: 100%;
+                }
+                select{
+                    width: 100%;
+                    padding: 15px;
+                    background-color: aqua;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                .list{
+                    padding: 30px;
+                }
+                .main{
+                    flex-direction: column;
+                }
+                .left{
+                    width: 100vw;
+                    height: 40vh;
+                }
+                .right{
+                    width: 100vw;
+                    /* background-color: red; */
+                }
+                .right-top{
+                    width: 100vw;
+                }
+                .right-bottom{
+                    flex-direction: column;
+                }
+                .right-bottom-left, .right-bottom-right{
+                    width: 100vw;
+                }
+            }
         </style>
     </head>
     <body>
+        <div class="small-screen">
+            <select name="" id="">
+                <option value="" class="list">Home</option>
+                <option value=""class="list">Product</option>
+                <option value=""class="list">Mobiles</option>
+                <option value="">Camera</option>
+                <option>Beauty</option>
+                <option>Health & Fitness</option>
+            </select>
+        </div>
         <div class="header">
             <ul class="item">
                 <li>Home</li>
@@ -118,6 +170,7 @@
                 <li>Contact</li>
             </ul>
         </div>
+
         <div class="main">
             <div class="left">left</div>
             <div class="right">
