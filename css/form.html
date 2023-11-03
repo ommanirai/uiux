@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        form {
+            width: 50%;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* border: 1px solid black; */
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 10px rgb(240, 239, 239);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        label {
+            display: inline-block;
+            width: 25%;
+        }
+
+        input[type='text'],
+        input[type='email'],
+        input[type='password'],
+        input[type='number'],
+        input[type='date'],
+        input[type='email'],
+        input[type='search'],
+        input[type='file'],
+        select,
+        .custom-div,
+        textarea {
+            display: inline-block;
+            width: 70%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        input[type='file'] {
+            border: 1px solid black;
+        }
+
+        .custom-div {
+            display: inline-flex;
+            justify-content: space-evenly;
+        }
+
+        .custom-label {
+            display: inline;
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            margin-right: 20px;
+        }
+
+        .description {
+            /* margin-bottom: 50px; */
+            vertical-align: top;
+        }
+        .custom-button{
+            text-align: center;
+        }
+        input[type='submit']{
+            padding: 15px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        input::placeholder{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- type => text, number, password, search, submit, date, email    -->
+    <h1>Register Here</h1>
+    <form action="datasave.php" method="post" target="_blank">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username1" placeholder="Enter Your Username Here">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="username" placeholder="Enter Your Password Here">
+
+        <label for="phone">Phone</label>
+        <input type="number" id="phone" name="phone" placeholder="Phone">
+
+        <label for="">dob</label>
+        <input type="date">
+
+        <label for="">Email</label>
+        <input type="email">
+
+        <label for="">Country</label>
+        <select name="" id="">
+            <option value="">Select Your Country</option>
+            <option value="">Nepal</option>
+            <option value="">US</option>
+            <option value="">UK</option>
+            <option value="">Australia</option>
+        </select>
+
+        <label for="">Search Here</label>
+        <input type="search">
+
+        <label for="">Gender</label>
+        <div class="custom-div">
+            <input type="radio" name="gender" id="male">
+            <label for="male" class="custom-label">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female" class="custom-label">Female</label>
+            <input type="radio" name="gender" id="others">
+            <label for="others" class="custom-label">Others</label>
+        </div>
+
+
+        <label for="">Skills</label>
+        <div class="custom-div">
+            <input type="checkbox">
+            <label for="" class="custom-label">HTML</label>
+            <input type="checkbox">
+            <label for="" class="custom-label">CSS</label>
+            <input type="checkbox">
+            <label for="" class="custom-label">Javascript</label>
+            <input type="checkbox">
+            <label for="" class="custom-label">React</label>
+        </div>
+
+
+        <label for="">Profile Image</label>
+        <input type="file">
+
+        <label for="" class="description">Description</label>
+        <textarea name="" id="" cols="60" rows="5"></textarea>
+
+
+        <!-- <button>Login</button> -->
+        <div class="custom-button">
+            <input type="submit" value="Register">
+            <p>Already Have an Account? <a href="login.html">Login Here</a></p>
+        </div>
+    </form>
+</body>
+
+</html>
