@@ -2,3 +2,11 @@
     /* margin: 0 !important; */
     box-sizing: border-box !important;
 }
+.image-block{
+    overflow: hidden;
+}
+.image-zoom:hover{
+    transform: scale(2);
+    transition: 2s;
+    cursor: pointer;
+}
