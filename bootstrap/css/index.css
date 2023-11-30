@@ -10,3 +10,6 @@
     transition: 2s;
     cursor: pointer;
 }
+.blogger-image-border{
+    border-radius: 50%;
+}
