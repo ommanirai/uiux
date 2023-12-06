@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Calculator</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <script>
+        var number1 = Number(prompt("Enter number"))
+        var symbol = prompt("Enter symbol")
+
+        if (symbol == "+") {
+            var number2 = Number(prompt("Enter second number"))
+            var sum = number1 + number2;
+            // console.log(sum)
+            document.write("first number: ", number1, "<br>")
+            document.write("Symbol: ", symbol, "<br>")
+            document.write("Second number: ", number2, "<br>")
+            document.write("Sum: ",sum)
+        }
+        
+        else if (symbol == '^') {
+            var power = Number(prompt("Enter Power"))
+            var square = Math.pow(number1, power)
+            // var square = number1 * number1;
+            // console.log(square)
+            document.write(square)
+        }
+        else{
+            // console.log("Enter Valid Symbol")
+            document.write("Enter Valid Symbol")
+        }
+        // square root of number
+        // Math.sqrt(number)
+
+        // subject marks
+        /*
+        pass or fail
+        if(pass){
+            percentage
+            percentage >90 => A+
+
+        }
+        
+        */
+
+    </script>
+</body>
+
+</html>
