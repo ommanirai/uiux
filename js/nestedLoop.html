@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loop</title>
+</head>
+
+<body>
+    <h1>Nested For Loop</h1>
+    <script>
+        /*
+        1. 
+        1
+        1 2 
+        1 2 3
+        1 2 3 4
+        1 2 3 4 5
+        */
+        // for (i = 1; i <= 5; i++) {
+        //     // i=3
+        //     for (j = 1; j <= i; j++) {
+        //         // document.write(i)
+        //         document.write(j)
+        //     }
+        //     document.write("<br>")
+        // }
+
+        /*
+        2. 
+        5
+        5 4
+        5 4 3
+        5 4 3 2
+        5 4 3 2 1
+        */
+
+        /*
+        3.pattern
+        *
+        * *
+        * * *
+        * * * *
+        * * * * *
+        */
+
+        /*
+        4.
+        1 
+        1 3
+        1 3 5
+        1 3 5 7
+        1 3 5 7 9
+        */
+
+
+        /*
+        5.
+        1 2 3 4 5
+        1 2 3 4
+        1 2 3
+        1 2
+        1
+        
+        
+        */
+        // for (i = 1; i <= 9; i= i + 2) {
+        //     // i = 1
+        //     for (j = 1; j <= i; j=j+2) {
+        //         // j = 1
+        //         // if (j % 2 != 0) {
+        //             document.write(j)
+        //         // }
+        //     }
+        //     document.write("<br>")
+        // }
+        
+
+        for (i = 1; i <= 9; i= i + 2) {
+            for (j = 1; j <= i; j++) {
+                if (j % 2 != 0) {
+                    document.write(j)
+                }
+            }
+            document.write("<br>")
+        }
+
+
+        /*
+        5.
+        2
+        2 4
+        2 4 6
+        2 4 6 8
+        2 4 6 8 10
+        
+        */
+    </script>
+</body>
+
+</html>
