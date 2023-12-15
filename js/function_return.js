@@ -7,16 +7,19 @@ function welcome(name, address){
 
 var result = welcome('sujan', 'vedu')
 // console.log(welcome('sujan', 'vedu'))
-console.log('from welcome function', result)
+// console.log('from welcome function', result)
 
 function cal(a , b){
     var sums = a + b;
     var div = a / b;
     var mul = a * b;
     // console.log('sum of two number is ', sums)
+
+    // ecma script(es5)
+    // es6
     return {
         sums: sums,
-        div: div,
+        div:div,
         mul: mul
     };
     // return a + b;
