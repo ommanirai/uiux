@@ -28,8 +28,6 @@ object_name.key
 2. bracket notation
 syntax:
 object_name['key']
-
-
 */
 // dot notation method
 // var brand = phone.brand;

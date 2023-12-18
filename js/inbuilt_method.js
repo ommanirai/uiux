@@ -42,3 +42,12 @@ var laptops = {
 //     console.log(laptops[item])
 // }
 
+// json => javascript object notation
+var serialization = JSON.stringify(laptops)
+// console.log(typeof(serialization))
+// console.log(serialization)
+// console.log(laptops)
+var deserialization = JSON.parse(serialization)
+console.log(typeof(deserialization))
+console.log(deserialization)
+
