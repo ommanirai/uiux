@@ -30,6 +30,7 @@ var fruits = ['apple', 'mango', 'mango', 'kiwi', 'orange', 'kiwi', 'apple', 'str
 // fruits.shift()
 // from last position
 // fruits.pop()
+
 // splice
 // syntax:
 // array_name.splice(starting_index, 'number_of_elements_to_remove', "add_elements")
@@ -41,6 +42,7 @@ var fruits = ['apple', 'mango', 'mango', 'kiwi', 'orange', 'kiwi', 'apple', 'str
 
 // console.log(fruits)
 
+
 // forEach
 /*
 syntax:
@@ -50,6 +52,22 @@ array_name.forEach(function(item, index){
 */
 var bikes = ['honda', 'yamaha', 'honda', 'ktm']
 
+// bikes.forEach(function(item, index){
+//     console.log(item)
+//     console.log(index)
+// })
+
+
+var fruits = ['apple', 'mango', 'mango', 'kiwi', 'orange', 'kiwi', 'apple', 'strawberry']
+
+// {
+//     apple: 1,
+//     mango: 2,
+//     kiwi: 2,
+//     orange: 1,
+//     strawberry: 1
+// }
+
 var uniqueFruits = []
 fruits.forEach(function (item, index) {
     // console.log(item)
@@ -58,9 +76,9 @@ fruits.forEach(function (item, index) {
         uniqueFruits.push(item)
     }
 })
-console.log(uniqueFruits)
-getUniqueArray(fruits)
-getUniqueArray(bikes)
+console.log("unique"+uniqueFruits)
+// getUniqueArray(fruits)
+// getUniqueArray(bikes)
 
 // console.log(fruits.indexOf("mango"))
 // console.log(fruits.lastIndexOf("mango"))
