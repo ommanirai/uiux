@@ -58,7 +58,17 @@ var bikes = ['honda', 'yamaha', 'honda', 'ktm']
 // })
 
 
-var fruits = ['apple', 'mango', 'mango', 'kiwi', 'orange', 'kiwi', 'apple', 'strawberry']
+var fruits = ['apple', 'mango','apple', 'apple', 'mango', 'kiwi', 'orange', 'kiwi', 'apple', 'strawberry']
+var uniquefruitss = {}
+fruits.forEach(function(item){
+    if(uniquefruitss[item]==undefined){
+        uniquefruitss[item] = 1
+    }
+    else{
+        uniquefruitss[item]++
+    }
+})
+console.log(uniquefruitss)
 
 // {
 //     apple: 1,
@@ -68,15 +78,15 @@ var fruits = ['apple', 'mango', 'mango', 'kiwi', 'orange', 'kiwi', 'apple', 'str
 //     strawberry: 1
 // }
 
-var uniqueFruits = []
-fruits.forEach(function (item, index) {
-    // console.log(item)
-    // console.log(index)
-    if (uniqueFruits.indexOf(item) == -1) {
-        uniqueFruits.push(item)
-    }
-})
-console.log("unique"+uniqueFruits)
+// var uniqueFruits = []
+// fruits.forEach(function (item, index) {
+//     // console.log(item)
+//     // console.log(index)
+//     if (uniqueFruits.indexOf(item) == -1) {
+//         uniqueFruits.push(item)
+//     }
+// })
+// console.log("unique"+uniqueFruits)
 // getUniqueArray(fruits)
 // getUniqueArray(bikes)
 

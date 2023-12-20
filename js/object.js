@@ -12,8 +12,10 @@ var phone = {
     ram: '6gb'
 }
 
-console.log(phone.brand.brand1)
-console.log(phone['brand'].brand1)
+console.log(phone['pricess'])
+
+// console.log(phone.brand.brand1)
+// console.log(phone['brand'].brand1)
 
 // brand, price and ram => key/property/name
 // mi, 13000, 6gb => value
@@ -45,6 +47,6 @@ syntax:
 object_name.key = value
 
 */
-phone.ram = '8gb'
-phone.status = 'available'
-console.log(phone)
+// phone.ram = '8gb'
+// phone.status = 'available'
+// console.log(phone)
