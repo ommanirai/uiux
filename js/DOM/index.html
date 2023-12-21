@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <h1 class="ha" id="demo">Good Morning</h1>
+    <h1 class="ha" id="demos">Good Morning</h1>
+    <img src="" alt="">
+    <script>
+        /*
+        dom
+        document object model
+
+        method / property
+        getElementById()
+        getElementByClassName()
+        querySelector()
+        querySelectorAll()
+
+        innerHTML
+        textContent
+        */
+        var bodys = document.body;
+        //    document.write("Hi")
+        var paragraph = document.createElement("p")
+        bodys.append(paragraph)
+
+        document.querySelector('p').innerHTML = "hi from js"
+        // document.querySelector('p').setAttribute('id', 'container')
+        document.querySelector('p').id = 'contains'
+
+        document.querySelectorAll("h1").innerHTML = "good morning guys"
+        // document.getElementById("demo").innerHTML = 'hiasdf'
+
+        document.getElementById("demo").style.color = 'red'
+        document.getElementById("demo").style.backgroundColor = 'black'
+
+
+
+
+        console.log(bodys)
+
+
+    </script>
+</body>
+
+</html>

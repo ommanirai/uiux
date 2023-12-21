@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" onkeyup="changeText()" id="form-data" >
+    <div class="container" id="demo">
+
+    </div>
+    <button onclick="changeBG()" onmouseover="hoverMe()" onmouseout="outMe()" >click me</button>
+    <script>
+        function changeText(){
+           var text =  document.getElementById("form-data").value;
+           document.getElementById("demo").innerHTML = text
+        }
+
+
+        function changeBG(){
+            document.getElementById('demo').style.backgroundColor = 'red'
+            document.getElementById('demo').innerHTML = 'haisdfasf'
+        }
+        function hoverMe(){
+            document.getElementById("demo").style.backgroundColor = 'yellow'
+        }
+
+        function outMe(){
+            document.getElementById("demo").style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+
+</html>
