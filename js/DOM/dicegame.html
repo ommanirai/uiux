@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        .container{
+            width: 75%;
+            margin: auto;
+            text-align: center;
+        }
+        .parent {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dice Game</h1>
+        <div class="parent">
+            <div>
+                <h2>Player one</h2>
+                <img src="images/face6.png" alt="" id="player-one" width="400px">
+            </div>
+            <div>
+                <h2>Player two</h2>
+                <img src="images/face6.png" alt="" id="player-two" width="400px">
+            </div>
+        </div>
+        
+        <h1 id="result"></h1>
+        <button onclick="playGame()">Play Game</button>
+    </div>
+    <script>
+        var dice_faces = ['images/face1.png', 'images/face2.png', 'images/face3.png', 'images/face4.png', 'images/face5.png', 'images/face6.png',]
+
+        function playGame(){
+            var number1 = Math.random() * 5
+            number1 = number1.toFixed(0)
+            // number1 = Math.floor(number1)
+            // console.log(number1)
+    
+            var number2 = Math.random() * 5
+            number2 = number2.toFixed(0)
+            // console.log(number2)
+    
+            document.getElementById("player-one").src = dice_faces[number1]
+            document.getElementById("player-two").src = dice_faces[number2]
+            if (number1 > number2) {
+                document.getElementById("result").innerHTML = 'Player one win the game!!!'
+            }
+            else if (number2 > number1) {
+                document.getElementById("result").innerHTML = 'Player two win the game!!!'
+            }
+            else {
+                document.getElementById("result").innerHTML = 'Draw game!!!'
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>
