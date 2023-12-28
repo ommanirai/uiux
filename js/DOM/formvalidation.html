@@ -91,7 +91,8 @@
         <p id="username-error"></p>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="username" placeholder="Enter Your Password Here">
+        <input type="text" id="password" name="username" placeholder="Enter Your Password Here" onkeyup="passwordValidation()">
+        <p id="password-error"></p>
 
         <label for="phone">Phone</label>
         <input type="number" id="phone" name="phone" placeholder="Phone">
@@ -100,7 +101,8 @@
         <input type="date">
 
         <label for="">Email</label>
-        <input type="email">
+        <input type="text" id="email" onkeyup="emailValidation()">
+        <p id="email-error"></p>
 
         <label for="">Country</label>
         <select name="" id="">
