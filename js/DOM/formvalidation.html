@@ -85,7 +85,7 @@
 <body>
     <!-- type => text, number, password, search, submit, date, email    -->
     <h1>Register Here</h1>
-    <form action="datasave.php" method="post" target="_blank">
+    <form action="datasave.php" onsubmit="return formValidation()" method="post" target="_blank">
         <label for="username">Username</label>
         <input type="text" id="username" name="username1" placeholder="Enter Your Username Here" onkeyup="usernameValidation()">
         <p id="username-error"></p>
@@ -149,7 +149,8 @@
 
         <!-- <button>Login</button> -->
         <div class="custom-button">
-            <input type="submit" value="Register">
+            <!-- <input type="submit" value="Register"> -->
+            <button type="submit" style="background-color: blue;color: white;padding: 15px;">submit</button>
             <p>Already Have an Account? <a href="login.html">Login Here</a></p>
         </div>
     </form>
