@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fruits = ['apple', 'mango', 'orange']
+        const displayFruits = () => {
+            setTimeout(() => {
+                fruits.map((item) => {
+                    document.write(`<li>${item}</li>`)
+                })
+            }, 3000);
+        }
+
+        const addFruits = (cb) => {
+            return promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    fruits.push("kiwi")
+                    // reject(console.log("error occured!!!"))
+                    resolve(console.log("Sucess"))
+                }, 4000);
+            })
+        }
+
+        // const displayResult = async() =>{
+        //     displayFruits()
+        //    await addFruits()
+        //     displayFruits()
+        // }
+        async function displayResult() {
+            displayFruits()
+            await addFruits()
+            displayFruits()
+        }
+
+        displayResult()
+
+
+    </script>
+</body>
+
+</html>

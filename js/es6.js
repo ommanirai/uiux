@@ -23,16 +23,16 @@ var details = {
 // console.log(details)
 
 // object destruction
-// function displayDetails() {
-//     var fruits = ['mango', 'apple', 'kiwi']
-//     var veg = ['potato', 'tomato']
-//     return {
-//         fruits: fruits,
-//         veg: veg,
-//         a: 'a',
-//         b: 'b'
-//     };
-// }
+function displayDetails() {
+    var fruits = ['mango', 'apple', 'kiwi']
+    var veg = ['potato', 'tomato']
+    return {
+        fruits: fruits,
+        veg: veg,
+        a: 'a',
+        b: 'b'
+    };
+}
 // var { fruits: fruit, veg } = displayDetails()
 // console.log(fruit)
 // console.log(veg)
@@ -54,8 +54,9 @@ var name = 'Shyam'
 // welcome()
 
 // arrow notation function
-// const welcome = name => {
+// const welcome = (name,address) => {
 //     console.log(`hi ${name} welcome to ${address}`)
+// return name
 // }
 
 const welcome = name => name;
@@ -91,7 +92,7 @@ var acers = laptops.filter(item => item.name == 'acer')
 
 // console.log(acers)
 
-// console.log(acerLaptop)
+console.log(acerLaptop)
 
 // spread and rest operator(...)
 var obj1 = {
