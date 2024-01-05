@@ -92,7 +92,7 @@ var acers = laptops.filter(item => item.name == 'acer')
 
 // console.log(acers)
 
-console.log(acerLaptop)
+// console.log(acerLaptop)
 
 // spread and rest operator(...)
 var obj1 = {
@@ -112,7 +112,7 @@ var obj3 = {
     ...obj2
 }
 // obj1.e = 'hi'
-obj3.f = 'Namaste'
+// obj3.f = 'Namaste'
 // console.log("obj 1>>>", obj1)
 // console.log('obj 2 >>>', obj2)
 // console.log('obj 3 >>>', obj3)
@@ -131,6 +131,7 @@ function displayDetails() {
 const { fruits, ...rest } = displayDetails()
 // console.log(fruits)
 // console.log(rest)
+
 
 // import and export
 // export

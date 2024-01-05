@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        p{
+            background-color: aqua;
+            height: 500px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hi</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat impedit voluptate architecto officiis voluptatibus sit doloremque animi non cupiditate, tempora, neque mollitia eos. Soluta veniam debitis commodi nihil voluptate consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatem sapiente, ratione ullam minus dicta esse, excepturi amet fugit quibusdam asperiores quae numquam itaque velit eaque cumque, repellendus voluptate nesciunt. </p>
+    <button id="hide-me">hide me</button>
+    <button id="show-me">show me</button>
+    <button id="hide-show">hide/show</button>
+    <script>
+        /*
+        selectors in jquery
+        element
+        class
+        id
+
+        syntax:
+        $('selector').event(function(){
+            $('selector').method()
+        })
+        */
+        // $('#hide-me').click(function () {
+        //     $('h1').hide()
+        // })  
+
+        // $('#show-me').click(function(){
+        //     $('h1').show()
+        // })
+
+        // $('p').click(function(){
+        //     // $('p').hide()
+        //     $(this).hide()
+        // })
+
+        // $('#hide-show').click(function(){
+        //     $('p').toggle(2000)
+        // })
+
+        $(document).ready(function(){
+            $('#hide-show').dblclick(function(){
+                $('p').slideToggle(2000)
+            })
+        })
+
+    </script>
+
+    
+</body>
+
+</html>
