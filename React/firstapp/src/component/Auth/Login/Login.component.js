@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import './Login.component.css'
+import { Button } from "../../Common/Button/Button.component";
 
 export class Login extends Component {
     constructor() {
@@ -27,20 +28,44 @@ export class Login extends Component {
         })
     }
 
-    validateForm = (FieldName) =>{
+    validateForm = (FieldName) => {
 
     }
 
+    handleSubmit = event => {
+        event.preventDefault()
+        this.setState({
+            isSubmitting: true
+        })
+        setTimeout(() => {
+            this.setState({
+                isSubmitting:false
+            })
+        }, 3000);
+    }
+
+
     render() {
+       
+
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Username</label>
                     <input type="text" name="username" onChange={this.handleChange} />
                     <label>Password</label>
                     <input type="password" name="password" onChange={this.handleChange} />
                     <div className="btn">
-                        <button >Login</button>
+                        <Button
+                            isSubmitting={this.state.isSubmitting}
+                            enabledLabel = "Login"
+                            disabledLabel = "LoginingIn..."
+                        ></Button>
+                        <Button
+                            isSubmitting={this.state.isSubmitting}
+                            // enabledLabel = "Login"
+                            // disabledLabel = "LoginingIn..."
+                        ></Button>
                     </div>
                 </form>
             </div>
