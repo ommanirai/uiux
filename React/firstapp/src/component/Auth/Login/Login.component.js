@@ -9,9 +9,10 @@ export class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            usernameErr: '',
-            passwordErr: '',
-            isSubmitting: false
+            usernameError: '',
+            passwordError: '',
+            isSubmitting: false,
+            isValidForm: false
         }
     }
 
@@ -29,8 +30,18 @@ export class Login extends Component {
     }
 
     validateForm = (FieldName) => {
-
+        var errMsg;
+        var errorField = FieldName + "Error"
+        errMsg = this.state[FieldName]
+            ? ""
+            : "required filed"
+        this.setState({
+            [errorField]: errMsg
+        }, () => {
+            console.log(this.state)
+        })
     }
+
 
     handleSubmit = event => {
         event.preventDefault()
@@ -39,32 +50,30 @@ export class Login extends Component {
         })
         setTimeout(() => {
             this.setState({
-                isSubmitting:false
+                isSubmitting: false
             })
         }, 3000);
     }
 
 
     render() {
-       
+
 
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Username</label>
+                    <label htmlFor="" className="">Username</label>
                     <input type="text" name="username" onChange={this.handleChange} />
+                    <p style={{color: 'red'}}>{this.state.usernameError}</p>
                     <label>Password</label>
                     <input type="password" name="password" onChange={this.handleChange} />
+                    <p style={{color: 'red'}} >{this.state.passwordError}</p>
                     <div className="btn">
                         <Button
                             isSubmitting={this.state.isSubmitting}
-                            enabledLabel = "Login"
-                            disabledLabel = "LoginingIn..."
-                        ></Button>
-                        <Button
-                            isSubmitting={this.state.isSubmitting}
-                            // enabledLabel = "Login"
-                            // disabledLabel = "LoginingIn..."
+                            enabledLabel="Login"
+                            disabledLabel="LoginingIn..."
+                            isValidForm={this.state.username && this.state.password}
                         ></Button>
                     </div>
                 </form>

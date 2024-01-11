@@ -4,10 +4,6 @@ export const Button = (props) => {
     var enabledLabel = props.enabledLabel || "Submit"
     const btn = props.isSubmitting
         ? <button disabled >{disabledLabel}</button>
-        : <button >{enabledLabel}</button>
-    return (
-        <div>
-            {btn}
-        </div>
-    )
+        : <button disabled={!props.isValidForm} >{enabledLabel}</button>
+    return btn
 }
