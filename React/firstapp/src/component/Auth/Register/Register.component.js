@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "../../Common/Button/Button.component";
+import './Register.component.css'
 
 const defaultForm = {
     username: '',
@@ -51,12 +52,12 @@ export class Register extends Component {
                             : 'username must be atleast 3 character'
                         : 'username must start with alphabet'
                     : 'required field'
-            break;
+                break;
             case 'email':
                 errorMsg = this.state.data[fieldName]
-                ? ''
-                : 'required field'
-            break;
+                    ? ''
+                    : 'required field'
+                break;
             case 'password':
 
         }
@@ -65,21 +66,32 @@ export class Register extends Component {
                 ...previousError.error,
                 [fieldName]: errorMsg
             }
-        }), ()=>{
+        }), () => {
             // console.log(this.state.error)
             var err;
-            err = Object.values(this.state.error).filter(err => err)
+            err = Object
+                .values(this.state.error)
+                .filter(err => err)
             // .filter(function(item){
             //     if(item){
             //         return item;
             //     }
             // })
             // console.log(err)
-            if(err.length == 0){
-                this.setState({
-                    isValidForm : true
-                })
-            }
+            // if (err.length == 0) {
+            //     this.setState({
+            //         isValidForm: true
+            //     })
+            // }
+            // else {
+            //     this.setState({
+            //         isValidForm: false
+            //     })
+            // }
+
+            this.setState({
+                isValidForm: err.length === 0
+            })
         })
     }
 
@@ -89,7 +101,7 @@ export class Register extends Component {
                 <form className="my-5">
                     <label className="fs-4">username</label>
                     <input type="text" name="username" className="form-control form-control-lg mb-3" onChange={this.handleChange} />
-                    <p>{this.state.error.username}</p>
+                    <p className="text-danger">{this.state.error.username}</p>
 
                     <label className="fs-4">email</label>
                     <input type="text" name="email" className="form-control form-control-lg mb-3" onChange={this.handleChange} />
