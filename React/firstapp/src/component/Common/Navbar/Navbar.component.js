@@ -1,5 +1,6 @@
 import React from "react";
 import './Navbar.component.css'
+import { Link } from "react-router-dom";
 
 export const Navbar = (props) => {
     // console.log(props)
@@ -12,11 +13,13 @@ export const Navbar = (props) => {
             <li>Logout</li>
         </ul>
         : <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Login</li>
-            <li>Register</li>
+            <li>
+                <Link to={'/'} className="text-decoration-none text-dark">Home</Link>
+            </li>
+            <li><Link to={'/about'} className="text-decoration-none text-dark">About</Link></li>
+            <li><Link to={'/contact'} className="text-decoration-none text-dark">Contact</Link></li>
+            <li><Link to={'/login'} className="text-decoration-none text-dark">Login</Link></li>
+            <li><Link to={'/register'} className="text-decoration-none text-dark">Register</Link></li>
         </ul>
     return (
         <>
