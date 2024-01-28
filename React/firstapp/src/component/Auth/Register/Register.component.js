@@ -25,7 +25,25 @@ export class Register extends Component {
             isSubmitting: false,
             isValidForm: false
         }
+        console.log("constructor at first")
     }
+
+    // init
+    componentDidMount = () => {
+        // api call
+        // data prepare
+        console.log("init stage at third")
+    }
+    
+    // update
+    componentDidUpdate = () => {
+        console.log("update stage at fourth")
+    }
+    // delete
+    componentWillUnmount = () => {
+        console.log("delete at last")
+    }
+
     handleChange = event => {
         const { name, value } = event.target;
         // console.log(name)
@@ -41,6 +59,8 @@ export class Register extends Component {
             this.validateForm(name)
         })
     }
+
+
     validateForm = fieldName => {
         var errorMsg;
         switch (fieldName) {
@@ -136,10 +156,24 @@ export class Register extends Component {
         })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.setState({
+            isSubmitting: true
+        })
+
+        setTimeout(() => {
+            this.setState({
+                isSubmitting: false
+            })
+        }, 3000);
+    }
+
     render() {
+        console.log("render at second")
         return (
             <div>
-                <form className="my-5">
+                <form className="my-5" onSubmit={this.handleSubmit} >
                     <label className="fs-4">username</label>
                     <input type="text" name="username" className="form-control form-control-lg mb-3" onChange={this.handleChange} />
                     <p className="text-danger">{this.state.error.username}</p>
@@ -169,7 +203,7 @@ export class Register extends Component {
                         enabledLabel="Register"
                         disabledLabel="Registering..."
                         isSubmitting={this.state.isSubmitting}
-                        isValidForm={this.state.isValidForm}
+                        isValidForm={!this.state.isValidForm}
                     ></Button>
                 </form>
             </div>

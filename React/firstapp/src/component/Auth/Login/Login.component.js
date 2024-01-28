@@ -42,7 +42,6 @@ export class Login extends Component {
         })
     }
 
-
     handleSubmit = event => {
         event.preventDefault()
         this.setState({
@@ -55,19 +54,16 @@ export class Login extends Component {
         }, 3000);
     }
 
-
     render() {
-
-
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="" className="">Username</label>
                     <input type="text" name="username" onChange={this.handleChange} />
-                    <p style={{color: 'red'}}>{this.state.usernameError}</p>
+                    <p style={{ color: 'red' }}>{this.state.usernameError}</p>
                     <label>Password</label>
                     <input type="password" name="password" onChange={this.handleChange} />
-                    <p style={{color: 'red'}} >{this.state.passwordError}</p>
+                    <p style={{ color: 'red' }} >{this.state.passwordError}</p>
                     <div className="btn">
                         <Button
                             isSubmitting={this.state.isSubmitting}

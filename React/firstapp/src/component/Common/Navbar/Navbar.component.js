@@ -16,10 +16,21 @@ export const Navbar = (props) => {
             <li>
                 <Link to={'/'} className="text-decoration-none text-dark">Home</Link>
             </li>
-            <li><Link to={'/about'} className="text-decoration-none text-dark">About</Link></li>
-            <li><Link to={'/contact'} className="text-decoration-none text-dark">Contact</Link></li>
-            <li><Link to={'/login'} className="text-decoration-none text-dark">Login</Link></li>
-            <li><Link to={'/register'} className="text-decoration-none text-dark">Register</Link></li>
+            <li>
+                <Link to={'/about'} className="text-decoration-none text-dark">About</Link>
+            </li>
+            <li>
+                <Link to={'/contact'} className="text-decoration-none text-dark">Contact</Link>
+            </li>
+            <li>
+                <Link to={'/login'} className="text-decoration-none text-dark">Login</Link>
+            </li>
+            <li>
+                <Link to={'/register'} className="text-decoration-none text-dark">Register</Link>
+            </li>
+            <li>
+                <Link to={'/sign-up'} className="text-decoration-none text-dark">Sign Up</Link>
+            </li>
         </ul>
     return (
         <>
