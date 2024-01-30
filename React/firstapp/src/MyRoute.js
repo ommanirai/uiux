@@ -5,6 +5,7 @@ import { Register } from "./component/Auth/Register/Register.component";
 import { Navbar } from "./component/Common/Navbar/Navbar.component";
 import { Home } from "./component/pages/Home.component";
 import { Reg } from "./component/Auth/Register/Reg";
+import Blog from "./component/pages/Blog.component";
 
 // const Home = (props) => {
 //     return <h1>Home page</h1>
@@ -29,6 +30,7 @@ export const MyRoutes = (props) => {
                 <Route path="/login" element={<Login />}></Route>
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/sign-up" element={<Reg />}></Route>
+                <Route path="/blog" element={<Blog/>}/>
             </Routes>
         </Router>
     )

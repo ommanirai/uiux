@@ -23,6 +23,9 @@ export const Navbar = (props) => {
                 <Link to={'/contact'} className="text-decoration-none text-dark">Contact</Link>
             </li>
             <li>
+                <Link to={'/blog'} className="text-decoration-none text-dark">Blog</Link>
+            </li>
+            <li>
                 <Link to={'/login'} className="text-decoration-none text-dark">Login</Link>
             </li>
             <li>
