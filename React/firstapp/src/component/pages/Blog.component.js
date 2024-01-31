@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Card } from './Card'
 
 const Blog = () => {
     const [user, setUser] = useState([])
     const [limit, setLimit] = useState(10)
     // console.log(user)
-
 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -18,14 +18,16 @@ const Blog = () => {
         <>
             {
                 user.map((item, index) => {
-                    return <li>{item.title}</li>
+                    return <Card key={index} card_item={item} />
                 })
             }
-            {
-                limit < 100 &&
-                <button onClick={() => setLimit(limit + 5)} >View More</button>
-            }
-            <button onClick={() => setLimit(limit - 5)} >View Less</button>
+            <div className='text-center'>
+                {
+                    limit < 100 &&
+                    <button onClick={() => setLimit(limit + 5)} >View More</button>
+                }
+                <button onClick={() => setLimit(limit - 5)} >View Less</button>
+            </div>
         </>
     )
 }
