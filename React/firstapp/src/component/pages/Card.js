@@ -1,6 +1,9 @@
 import React from 'react'
 
+// export const Card = (props) => {
+//     console.log(props.card_item.title)
 export const Card = ({ card_item }) => {
+    // console.log(card_item.titile)
     // console.log(props.id)
     return (
         <div className='text-center'>
