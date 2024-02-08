@@ -22,12 +22,12 @@ const Count = () => {
     
     
     */
-   const handleSubmit = e =>{
-    dispatch({
-        type:'CHANGE_GAME',
-        payload:game
-    })
-   }
+    const handleSubmit = e => {
+        dispatch({
+            type: 'CHANGE_GAME',
+            payload: game
+        })
+    }
     return (
         <>
             <div>Count: {counts}</div>
